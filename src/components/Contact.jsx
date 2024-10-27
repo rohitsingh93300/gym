@@ -1,5 +1,6 @@
 import React from 'react'
-
+import { Dumbbell, Mail, MapPin, Phone, Pin } from 'lucide-react';
+// import mail from 'lucide-react'
 const Contact = () => {
   return (
     <div id='contact' className="bg-gray-100 dark:bg-dark dark:text-white">
@@ -12,7 +13,7 @@ const Contact = () => {
           Whether you’re looking for more information or just want to send us a message, feel free to reach out. We’d love to hear from you!
         </p>
 
-        <div className='grid md:grid-flow-col  gap-10'>
+        <div className='grid md:grid-flow-col gap-10'>
 
           {/* Contact Form */}
           <div className="bg-white dark:bg-[#28282B] shadow-lg rounded-lg p-8 md:p-12 max-w-xl md:w-[400px] ">
@@ -63,13 +64,27 @@ const Contact = () => {
           <div className="bg-white dark:bg-[#28282B] shadow-lg rounded-lg p-8 md:p-12 max-w-3xl w-full flex flex-col items-center md:flex-row gap-7 space-y-6 md:space-y-0 md:space-x-8 ">
             <div className="flex-1">
               <h3 className="text-2xl font-semibold text-primary mb-4">Our Location</h3>
-              <p className="text-gray-600 dark:text-gray-300">
-                FitBody Gym <br />
+              {/* <div className="text-gray-600 dark:text-gray-300 flex gap-2 ">
+                <Dumbbell/>
+                FitBody Gym 
+              </div> */}
+              <div className="text-gray-600 dark:text-gray-300 flex gap-2 items-center">
+                <MapPin className='text-primary'/>
+                <p>
                 123 Fitness Avenue <br />
                 Muscle City, Workout State 12345
-              </p>
+                </p>
+              </div>
+               
+              <div className='flex gap-2 items-center'>
+               <Phone className='text-primary'/>
               <p className="text-gray-600 dark:text-gray-300 mt-4">Phone: (123) 456-7890</p>
+              </div>
+              <div className='flex gap-2 items-center'>
+              <Mail className='text-primary'/>
               <p className="text-gray-600 dark:text-gray-300">Email: contact@fitbodygym.com</p>
+              </div>
+              
             </div>
             <div className="">
               {/* Placeholder for Google Map */}
